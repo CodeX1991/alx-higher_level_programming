@@ -9,4 +9,3 @@ for n in range(0, 9):
             print("{}{}".format(n, m))
         else:
             print("{}{}".format(n, m), end=", ")
-print()
