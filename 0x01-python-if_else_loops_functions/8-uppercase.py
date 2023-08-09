@@ -6,7 +6,7 @@ def uppercase(str):
     strLen = len(str)
     count = 0
     for ch in str:
-        if count == strLen - 1:
+        if count == strLen - 1 or strLen == 0:
             sep = '\n'
         if ord(ch) >= 97 and ord(ch) <= 122:
             print("{}".format(chr(ord(ch) - 32)), end=sep)
