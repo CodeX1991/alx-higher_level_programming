@@ -10,5 +10,4 @@ def remove_char_at(str, n):
         if i == n:
             continue
         copied_str += str[i]
-    copied_str += '\0'
     return copied_str
