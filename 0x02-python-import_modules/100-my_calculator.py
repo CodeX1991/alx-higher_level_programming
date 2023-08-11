@@ -11,15 +11,18 @@ if __name__ == '__main__':
     a = int(argv[1])
     b = int(argv[3])
     for ch in str_ch:
+        if ch != argv[2]:
+            continue
         if ch == argv[2]:
-            if ch == '+':
-                print("{} {} {} = {}".format(a, b, ch, add(a, b)))
-            elif ch == '-':
-                print("{} {} {} = {}".format(a, b, ch, sub(a, b)))
-            elif ch == '*':
-                print("{} {} {} = {}".format(a, b, ch, mul(a, b)))
-            elif ch == '/':
-                print("{} {} {} = {}".format(a, b, ch, div(a, b)))
-            exit(0)
-    print("Unknown operator. Available operators: +, -, * and /")
-    exit(1)
+            break
+    if ch != argv[2]:
+        print("Unknown operator. Available operators: +, -, * and /")
+        exit(1)
+    if ch == '+':
+        print("{} {} {} = {}".format(a, ch, b, add(a, b)))
+    elif ch == '-':
+        print("{} {} {} = {}".format(a, ch, b, sub(a, b)))
+    elif ch == '*':
+        print("{} {} {} = {}".format(a, ch, b, mul(a, b)))
+    elif ch == '/':
+        print("{} {} {} = {}".format(a, ch, b, div(a, b)))
