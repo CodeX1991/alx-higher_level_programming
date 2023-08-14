@@ -6,6 +6,7 @@ def print_reversed_list_integer(my_list=[]):
     Args:
         my_list: the given list to work with
     """
-    for i in range(1, (1 + len(my_list))):
-        i = -i
-        print("{:d}".format(my_list[i]))
+    if my_list:
+        for i in range(1, (1 + len(my_list))):
+            i = -i
+            print("{:d}".format(my_list[i]))
