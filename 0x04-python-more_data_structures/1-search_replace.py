@@ -10,10 +10,9 @@ def search_replace(my_list, search, replace):
     Return:
         the new list
     """
-    if my_list:
-        new_list = []
-        for n in my_list:
-            if n == search:
-                n = replace
-            new_list.append(n)
-        return new_list
+    new_list = []
+    for n in my_list:
+        if n == search:
+            n = replace
+        new_list.append(n)
+    return new_list
