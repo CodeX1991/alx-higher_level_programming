@@ -12,7 +12,7 @@ def best_score(a_dictionary):
     if a_dictionary is None:
         return None
 
-    _max = max(a_dictionary.values())
+    _max = max(a_dictionary.values(), default=None)
 
     for k, v in a_dictionary.items():
         if v == _max:
