@@ -9,9 +9,8 @@ def safe_print_list(my_list=[], x=0):
 
     Return: the actual number printed out
     """
+    size_of_list = 0
     try:
-        size_of_list = 0
-
         for elem in my_list:
             size_of_list += 1
 
@@ -22,7 +21,6 @@ def safe_print_list(my_list=[], x=0):
                 print("{}".format(my_list[i]))
             else:
                 print("{}".format(my_list[i]), end="")
-    except Exception:
-        pass
-    finally:
         return x
+    except TypeError:
+        pass
