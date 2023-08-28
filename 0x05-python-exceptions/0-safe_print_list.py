@@ -21,6 +21,7 @@ def safe_print_list(my_list=[], x=0):
                 print("{}".format(my_list[i]))
             else:
                 print("{}".format(my_list[i]), end="")
-        return x
     except TypeError:
         pass
+    finally:
+        return x
