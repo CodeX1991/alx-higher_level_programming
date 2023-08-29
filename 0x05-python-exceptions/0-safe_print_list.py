@@ -9,20 +9,17 @@ def safe_print_list(my_list=[], x=0):
 
     Return: the actual number printed out
     """
-    size_of_list = 0
-    for elem in my_list:
-        size_of_list += 1
+    idx = 0
 
-    if x > size_of_list:
-        x = size_of_list
     try:
-        if x != 0 and my_list:
-            for i in range(0, x):
-                if i == x - 1:
-                    print("{}".format(my_list[i]))
+        for i in my_list:
+            if idx < x:
+                if idx == x - 1:
+                    print("{}".format(my_list[idx]))
                 else:
-                    print("{}".format(my_list[i]), end="")
+                    print("{}".format(my_list[idx]), end="")
+                idx += 1
     except Exception:
         pass
     finally:
-        return x
+        return idx
