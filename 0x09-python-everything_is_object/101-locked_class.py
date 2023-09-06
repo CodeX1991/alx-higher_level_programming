@@ -4,4 +4,5 @@
 
 
 class LockedClass(object):
+    """A restricted class attribute"""
     __slots__ = 'first_name'
