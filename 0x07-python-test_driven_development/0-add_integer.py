@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Module documnetation"""
+
 
 def add_integer(a, b=98):
     """Adds 2 integers
