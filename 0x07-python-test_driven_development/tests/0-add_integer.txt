@@ -1,0 +1,126 @@
+--------------------
+Integer addition module
+--------------------
+
+Import module:
+--------------
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+
+Funtion:
+--------
+Write a function that adds 2 integers.
+
+Operations:
+-----------
+'a' and 'b' must be integers or floats, otherwise raise a TypeError exception
+with the message 'a must be an integer' or 'b must be an integer'.
+
+
+Section // Non-parameter
+------------------------
+
+Test case #0: A test casewithout parameters
+
+	>>> add_integer()
+	Traceback (most recent call last):
+	TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Test case #1: A test case for an argument with no assigned value
+
+	>>> add_integer(a, 123)
+	Traceback (most recent call last):
+	NameError: name 'a' is not defined
+
+Test case #2: A test case for uisng the default value of parameter 'b'
+
+	>>> add_integer(123)
+	221
+
+Test case #3: A test case for using the default value of parameter 'b'
+with the float parameter 'a'
+
+	>>> add_integer(2.0, )
+	100
+
+Section // Numbers
+------------------
+
+Test case #4: A test case between two integers
+
+	>>> add_integer(3, 4)
+	7
+
+Test case #5: A test case between two floats
+
+	>>> add_integer(2.0, 4.0)
+	6
+
+Test case #6: A test case between integer and float
+
+	>>> add_integer(6, 3.0)
+	9
+
+Test case #7: A test case between float and integer
+
+	>>> add_integer(3.0, 6)
+	9
+
+Test case #8: A test case between two negatives floats
+
+	>>> add_integer(-1.5, -2.0)
+	-3
+
+Test case #9: A test case between float and negative integer
+
+	>>> add_integer(100.5, -10)
+	90
+
+Test case #10: A test case between integer and infinity float
+
+	>>> add_integer(5, 1e500)
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinty to integer
+
+Test case #11: A test case infinity float and negative integer
+
+	>>> add_integer(999e9999, -1)
+	traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
+
+
+Section // Non-Numbers
+----------------------
+
+Test case #12: A test case with the first parameter of type 'None'
+
+	>>> add_integer(None, 2)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+Test case #13: A test case with the second parameter of type 'None'
+
+	>>> add_integer(5, None)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+Test case #14: A test case with the first parameter of type 'list'
+
+	>>> add_integer([1, 3], 15)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+Test case #15: A test case with the second parameter of type 'str'
+
+	>>> add_integer(1, 'Holy')
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+
+Section // Types
+----------------
+
+Test case #16: A test case to check the return intger type
+
+	>>> type(add_integer(2, 2))
+	<class 'int'>
