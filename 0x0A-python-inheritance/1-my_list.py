@@ -10,3 +10,5 @@ class MyList(list):
 
         if issubclass(MyList, list) is True:
             print(sorted(self))
+        if issubclass(MyList, list) is False:
+            raise AttributeError
