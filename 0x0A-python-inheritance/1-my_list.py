@@ -8,7 +8,5 @@ class MyList(list):
     def print_sorted(self):
         """Prints the list sorted in ascending order"""
 
-        if issubclass(MyList, list) is True:
+        if issubclass(MyList, list):
             print(sorted(self))
-        if issubclass(MyList, list) is False:
-            raise AttributeError
