@@ -1,0 +1,54 @@
+--------------------------------
+A module that inherits from list
+--------------------------------
+
+Import module:
+--------------
+        >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+	>>> my_list.print_sorted()
+
+Funtion:
+--------
+Write a class BaseGeometry (based on 6-base_geometry.py)
+
+	* You can assume name is always a string
+
+	* If value is not an integer: raise a TypeError exception,
+	with the message <name> must be an integer
+
+	* If value is less or equal to 0: raise a ValueError exception
+	with the message <name> must be greater than 0
+
+
+Section // No exceptions
+------------------------
+
+Test case #0: A test case with good param
+
+	>>> bg.integer_validator("my_int", 12)
+
+
+Test case #1: A test case with good param
+
+	>>> bg.integer_validator("width", 89)
+
+
+Section // Type Errors
+----------------------
+
+Test case #2: A test case with not integer value
+
+	>>> try:
+	...	bg.integer_validator("name", "John")
+	... except Exception as e:
+	...	print("[{}] {}".format(e.__class__.__name__, e))
+	[TypeError] name must be an integer
+
+Test case #3: A test case with an infinite float value
+
+	>>> try:
+	...	bg.integer_validator("inf_float", 1e400)
+	... except Exception as e:
+	...	print("[{}] {}".format(e.__class__.__name__, e))
+	[TypeError] inf_float must be an integer
+
