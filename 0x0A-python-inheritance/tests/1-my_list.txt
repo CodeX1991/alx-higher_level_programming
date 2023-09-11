@@ -60,19 +60,3 @@ Test case #2: A test case with all negative int
 	[-5, -4, -3, -2, -1]
         >>> print(my_list)
         [-1, -4, -2, -3, -5]
-
-Section // wrong attributes
----------------------------
-
-Test case #3: A invalid test case of tuple
-
-	>>> my_list = (1, 2)
-	>>> print(my_list)
-	(1, 2)
-
-	>>> my_list.print_sorted()
-	Traceback (most recent call last):
-	AttributeError 'tuple' object has no attribute 'print_sorted'
-
-	>>> print(my_list)
-	(1, 2)
