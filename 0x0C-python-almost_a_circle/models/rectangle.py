@@ -11,6 +11,11 @@ class Rectangle(Base):
         """Class constructor"""
         super().__init__(id)
 
+        self.validate_param(width, 'width')
+        self.validate_param(height, 'height')
+        self.validate_param(x, 'x')
+        self.validate_param(y, 'y')
+
         self.__width = width
         self.__height = height
         self.__x = x
@@ -60,13 +65,13 @@ class Rectangle(Base):
         self.validate_param(param, 'y')
         self.__y = param
 
-    def validate_param(self, value, var):
+    def validate_param(self, value, param):
         """validate parameter"""
         if type(value) is not int:
-            raise TypeError(var + " must be an integer")
+            raise TypeError(param + " must be an integer")
 
-        if value <= 0 and var in ('width', 'height'):
-            raise ValueError(var + " must be > 0")
+        if value <= 0 and param in ('width', 'height'):
+            raise ValueError(param + " must be > 0")
 
-        if value < 0 and var in ('x', 'y'):
-            raise ValueError(var + " must be > 0")
+        if value < 0 and param in ('x', 'y'):
+            raise ValueError(param + " must be > 0")
