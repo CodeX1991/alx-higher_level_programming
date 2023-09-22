@@ -24,6 +24,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, param):
         """Set the width"""
+        self.validate_param(param, 'width')
         self.__width = param
 
     @property
@@ -34,6 +35,7 @@ class Rectangle(Base):
     @height.setter
     def height(self, param):
         """set the height"""
+        self.validate_param(param, 'height')
         self.__height = param
 
     @property
@@ -44,6 +46,7 @@ class Rectangle(Base):
     @x.setter
     def x(self, param):
         """set the height"""
+        self.validate_param(param, 'x')
         self.__x = param
 
     @property
@@ -54,4 +57,16 @@ class Rectangle(Base):
     @y.setter
     def y(self, param):
         """set the height"""
+        self.validate_param(param, 'y')
         self.__y = param
+
+    def validate_param(self, value, var):
+        """validate parameter"""
+        if type(value) is not int:
+            raise TypeError(var + " must be an integer")
+
+        if value <= 0 and var in ('width', 'height'):
+            raise ValueError(var + " must be > 0")
+
+        if value < 0 and var in ('x', 'y'):
+            raise ValueError(var + " must be > 0")
