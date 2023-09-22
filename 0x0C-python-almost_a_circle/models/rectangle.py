@@ -74,4 +74,4 @@ class Rectangle(Base):
             raise ValueError(param + " must be > 0")
 
         if value < 0 and param in ('x', 'y'):
-            raise ValueError(param + " must be > 0")
+            raise ValueError(param + " must be >= 0")
