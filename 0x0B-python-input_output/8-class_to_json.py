@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 """An Input and Output Module"""
-import json
 
 
 def class_to_json(obj):
