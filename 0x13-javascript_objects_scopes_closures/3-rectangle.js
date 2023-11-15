@@ -2,7 +2,7 @@
 
 module.exports = class Rectangle {
   constructor (w, h) {
-    if (w > 0 && h > 0 && typeof w === 'number' && typeof h === 'number') {
+    if (w > 0 && h > 0) {
       this.width = w;
       this.height = h;
     }
@@ -14,9 +14,9 @@ module.exports = class Rectangle {
       let j = 0;
       while (j < this.width) {
         if (j === this.width - 1) {
-          console.log('x');
+          console.log('X');
         } else {
-          process.stdout.write('x');
+          process.stdout.write('X');
         }
         j++;
       }
