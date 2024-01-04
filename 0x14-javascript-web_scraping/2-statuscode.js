@@ -11,6 +11,6 @@ request(process.argv[2], function (err, response) {
     console.log(err);
   } else {
     // Printing status code
-    console.log('Code:', response.statusCode);
+    console.log('code:', response.statusCode);
   }
 });
