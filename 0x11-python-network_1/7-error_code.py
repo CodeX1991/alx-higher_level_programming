@@ -6,7 +6,6 @@ and displays the body of the response
 
 from sys import argv
 import requests
-from urllib.error import HTTPError
 
 # Shouldnot execute when imported
 if __name__ == "__main__":
