@@ -8,7 +8,6 @@ of the response
 
 from sys import argv
 import requests
-from urllib.parse import urlencode
 
 # Shouldnot execute when imported
 if __name__ == "__main__":
@@ -17,4 +16,4 @@ if __name__ == "__main__":
 
     # Request for the url
     r = requests.post(argv[1], params=payload)
-    print(r)
+    print(r.text)
