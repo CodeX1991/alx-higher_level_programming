@@ -11,8 +11,7 @@ import requests
 # Shouldnot execute when imported
 if __name__ == "__main__":
     # Fetch the content
-    url = 'https://api.github.com/users'
-    r = requests.get(url, auth=(argv[1], argv[2]))
-    r = r.json()
+    url = 'https://api.github.com/user'
+    r = requests.get(url, auth=(argv[1], argv[2])).json()
 
-    print(r.get('id'))
+    print(r.get("id"))
